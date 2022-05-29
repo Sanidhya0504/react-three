@@ -32,11 +32,11 @@ const Controls = () => {
 */
 }
 
-const Sphere = ({ args, color }) => {
+const Sphere = ({ args, color, size }) => {
   return (
     <points>
       <sphereGeometry args={args} />
-      <pointsMaterial size={0.02} color={color} sizeAttenuation />
+      <pointsMaterial size={size} color={color} sizeAttenuation />
     </points>
   );
 };
@@ -46,8 +46,8 @@ export default function SphereComp() {
     <div className="sphere_wrap">
       <Canvas>
         <perspectiveCamera position={(0, 0, 0)}>
-          <Sphere args={[5, 120, 32]} color={0x0000ff} />
-          <Sphere args={[4, 60, 32]} color={0xf2f4f8} />
+          <Sphere args={[5, 120, 32]} color={0x0000ff} size={0.02} />
+          <Sphere args={[4, 60, 32]} color={0xf2f4f8} size={0.01} />
         </perspectiveCamera>
         <OrbitControls autoRotate={true} enablePan={false} enableZoom={false} />
       </Canvas>
