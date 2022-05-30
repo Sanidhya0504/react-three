@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <Navigation />
+      <SphereComp />
     </div>
   );
 }
