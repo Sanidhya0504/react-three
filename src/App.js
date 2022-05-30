@@ -6,7 +6,7 @@ import SphereComp from "./components/sphere";
 function App() {
   return (
     <div>
-      <SphereComp />
+      <Navigation />
     </div>
   );
 }
